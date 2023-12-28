@@ -41,8 +41,6 @@ export const Grid: React.FC<Props> = ({ size }) => {
   const [grid, setGrid] = React.useState<Box[][]>(initialGrid);
   const [selectedIds, setSelectedIds] = React.useState<Array<Box["id"]>>([]);
 
-  React.useEffect(() => {}, [size]);
-
   function toggleSelected(id: Box["id"]): void {
     setSelectedIds((prev) => {
       if (prev.includes(id)) {
